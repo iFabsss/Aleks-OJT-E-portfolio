@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import aleksPhoto from "./assets/Aleks Photo.jpg";
+import tfsLogo from "./assets/ToyotaFinancialServicesLogo.jpg";
+import mtwLogo from "./assets/myToyotaWallet Logo.png";
 
 /* ── Toyota palette ── */
 const C = {
@@ -243,11 +246,11 @@ function Logos() {
   return (
     <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
       <div className="logo-box" style={{ width: 160, height: 52 }}>
-        <img src="src/assets/ToyotaFinancialServicesLogo.jpg" alt="Services PH" height="100%" />
+        <img src={tfsLogo} alt="Services PH" height="100%" />
       </div>
       <div style={{ color: C.muted, fontSize: 12 }}>×</div>
       <div className="logo-box" style={{ width: 160, height: 52, borderColor: C.gold + "55" }}>
-        <img src="src/assets/myToyotaWallet Logo.png" alt="myToyota Wallet" height="100%" />
+        <img src={mtwLogo} alt="myToyota Wallet" height="100%" />
       </div>
     </div>
   );
@@ -449,7 +452,7 @@ function Hero() {
           {/* Photo */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
             <div className="photo-placeholder">
-              <img src="src/assets/Aleks Photo.jpg" alt="Alexander Fabian Guarin" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} />
+              <img src={aleksPhoto} alt="Alexander Fabian Guarin" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} />
             </div>
             <div style={{ display: "flex", gap: 16 }}>
               {[
