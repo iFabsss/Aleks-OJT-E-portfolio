@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import aleksPhoto from "./assets/Aleks Photo.jpg";
 import tfsLogo from "./assets/ToyotaFinancialServicesLogo.jpg";
 import mtwLogo from "./assets/myToyotaWallet Logo.png";
+import aleksPogiPhoto from "./assets/candidpogi.jpg";
 
 /* ── Toyota palette ── */
 const C = {
@@ -263,6 +264,7 @@ const NAV_ITEMS = [
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills & Tools" },
   { id: "reflection", label: "Reflection" },
+  { id: "documentation", label: "Documentation" },
 ];
 
 function Navbar({ active }) {
@@ -418,7 +420,7 @@ function Hero() {
                 marginTop: 20, color: C.muted, lineHeight: 1.8,
                 maxWidth: 500, fontSize: 15,
               }}>
-                {"{A punchy one-liner about yourself — something like: 'Turning confusion into clarity, one Gantt chart at a time.'}"}
+                {"I like to get stoned in a mile -> Milestone"}
               </p>
 
               <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
@@ -452,13 +454,12 @@ function Hero() {
           {/* Photo */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
             <div className="photo-placeholder">
-              <img src={aleksPhoto} alt="Alexander Fabian Guarin" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} />
+              <img src={aleksPogiPhoto} alt="Alexander Fabian Guarin" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} />
             </div>
             <div style={{ display: "flex", gap: 16 }}>
               {[
-                { label: "Hrs Rendered", val: "{500+}" },
-                { label: "Projects", val: "{3}" },
-                { label: "Deliverables", val: "{10+}" },
+                { label: "Project", val: "mTW" },
+                { label: "Deliverables", val: "Too many to count" },
               ].map((s) => (
                 <div key={s.label} style={{ textAlign: "center" }}>
                   <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "1.6rem", fontWeight: 800, color: C.red }}>{s.val}</div>
@@ -486,7 +487,7 @@ function Hero() {
 
 /* ── Marquee strip ── */
 function MarqueeStrip() {
-  const items = ["Project Management", "myToyota Wallet", "Toyota Financial Services", "Agile", "BSIT", "OJT 2025", "Innovation"];
+  const items = ["Project Management", "myToyota Wallet", "Toyota Financial Services", "Agile/SCRUM", "BSIT", "Intern", "Innovation"];
   const doubled = [...items, ...items];
   return (
     <div style={{ background: C.red, padding: "10px 0", overflow: "hidden" }}>
@@ -515,7 +516,7 @@ function ProfileSection() {
           <SectionHeader
             label="01 · Who Am I"
             title="Student Profile"
-            subtitle="The person behind the portfolio — no stock photos, just the real deal."
+            //subtitle="The one and only."
           />
         </FadeSection>
 
@@ -536,22 +537,34 @@ function ProfileSection() {
               <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
                 <div style={{ flex: 1, minWidth: 220 }}>
                   <p style={{ color: C.muted, lineHeight: 1.85, marginBottom: 16 }}>
-                    {"{Paragraph 1: Introduce yourself — your name, where you're from, what you're studying, and a fun fact that makes you memorable. Keep it warm and a little witty.}"}
+                    {"I’m Alexander Fabian Guarin, a BSIT student from Pasay City, and someone who’s been competitive since high school, whether in academics, " + 
+                    "hackathons, or even the occasional game. Outside of tech, I keep things balanced with hobbies like gaming, sports, playing musical instruments, " + 
+                    "and watching documentaries. If there’s one thing that makes me memorable, it’s that I don’t just stick to one lane—I like exploring different interests " + 
+                    "while still aiming to excel in what I do."}
                   </p>
                   <p style={{ color: C.muted, lineHeight: 1.85, marginBottom: 16 }}>
-                    {"{Paragraph 2: Talk about your academic background — your course, relevant subjects you've taken, projects you've done in school, and what drew you to Information Technology.}"}
+                    {"I graduated with honors from Pasay City National Science High School for both junior and senior high school, and I’m currently taking up Bachelor " + 
+                    "of Science in Information Technology at Technological Institute of the Philippines Manila. Throughout my academic journey, I’ve consistently earned " + 
+                    "Dean’s and VPAA List honors, reflecting my commitment to learning and growth. I’ve worked on various school projects and joined competitive environments " + 
+                    "like hackathons, which strengthened both my technical and problem-solving skills. My interest in Information Technology grew from the challenge of building " +
+                    "solutions and the opportunity to create something impactful from scratch."}
                   </p>
                   <p style={{ color: C.muted, lineHeight: 1.85 }}>
-                    {"{Paragraph 3: Share your career aspirations — where you see yourself in 5 years, what kind of work excites you, and how this OJT fits into that bigger picture.}"}
+                    {"Looking ahead, I see myself in five years as either a Senior Developer, a Software Engineer, a Project Manager, or even someone who has launched a "+
+                    "startup. I’m most excited by work that aligns with my strengths—where I can build, lead, and continuously improve. My experience as a Project Management "+
+                    "Intern has already expanded my perspective, allowing me to develop not just technical skills but also leadership, communication, and strategic thinking. "+
+                    "This OJT is a key step toward my long-term goals, helping me bridge the gap between academic knowledge and real-world application."}
                   </p>
                 </div>
-                <div style={{ minWidth: 180 }}>
-                  {[
+                <div style={{ minWidth: 180, maxWidth: 400, textAlign: "center" }}>
+                  <img src={aleksPhoto} alt="Alexander Fabian Guarin" style={{ width: "100%", height: "auto", borderRadius: 12, marginBottom: 24 }} />
+                  <div style={{ textAlign: "left" }}>
+                    {[
                     ["Full Name", "Alexander Fabian Guarin"],
                     ["Course", "BSIT — 4th Year"],
-                    ["School", "{Your University}"],
-                    ["Email", "{your@email.com}"],
-                    ["OJT Period", "{Month Year – Month Year}"],
+                    ["School", "Technological Institute of the Philippines - Manila"],
+                    ["Email", "guarinfabian7@gmail.com | mafguarin@tip.edu.ph"],
+                    //["OJT Period", "{Month Year – Month Year}"],
                     ["Location", "Metro Manila, PH"],
                   ].map(([k, v]) => (
                     <div key={k} style={{ marginBottom: 14 }}>
@@ -559,6 +572,7 @@ function ProfileSection() {
                       <div style={{ fontWeight: 600, color: C.offWhite, fontSize: 14 }}>{v}</div>
                     </div>
                   ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -579,7 +593,7 @@ function CompanySection() {
           <SectionHeader
             label="02 · Where I Worked"
             title="Company Profile"
-            subtitle="Toyota Financial Services PH + the myToyota Wallet team — where the magic happened."
+            subtitle="Toyota Financial Services PH + the myToyota Wallet team."
           />
         </FadeSection>
 
@@ -592,14 +606,19 @@ function CompanySection() {
             }}>
               <div style={{ marginBottom: 20 }}>
                 <div className="logo-box" style={{ width: "100%", height: 72, marginBottom: 20 }}>
-                  Toyota Financial Services Philippines Corp.<br />— Logo Placeholder —
+                  <img src={tfsLogo} alt="Toyota Financial Services PH" height="100%" />
                 </div>
               </div>
               <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.3rem", textTransform: "uppercase", color: C.goldLight, marginBottom: 16 }}>
                 Toyota Financial Services PH
               </h3>
               <p style={{ color: C.muted, lineHeight: 1.8, fontSize: 14, marginBottom: 16 }}>
-                {"{Brief company overview: industry (financial services/automotive financing), size, year founded, location (e.g., BGC, Taguig), and primary services — auto loans, lease, insurance, etc.}"}
+                {"Toyota Financial Services Philippines Corporation (TFSPH) is a company in the financial services and automotive financing industry, primarily focused "+
+                "on supporting vehicle ownership and dealership operations. Established in 2002 and headquartered in Taguig City (notably within the Bonifacio Global City "+
+                "business district), TFSPH operates as part of the global network of Toyota Financial Services Corporation, which serves customers in over 37 countries. "+
+                "In the Philippines, the company provides a range of services including auto loans, leasing, insurance, and inventory financing for Toyota dealers, helping "+
+                "both individual customers and businesses access reliable financial solutions. Backed by its strong global affiliation and local partnership with GT Capital "+
+                "Holdings Inc., TFSPH continues to grow as a key player in enabling accessible and flexible vehicle financing in the country."}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {["Financial Services", "Automotive", "Philippines", "BGC Taguig"].map(t => (
@@ -616,14 +635,15 @@ function CompanySection() {
             }}>
               <div style={{ marginBottom: 20 }}>
                 <div className="logo-box" style={{ width: "100%", height: 72, marginBottom: 20, borderColor: C.gold + "55" }}>
-                  myToyota Wallet<br />— Logo Placeholder —
+                  <img src={mtwLogo} alt="myToyota Wallet" height="100%" />
                 </div>
               </div>
               <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.3rem", textTransform: "uppercase", color: C.goldLight, marginBottom: 16 }}>
                 myToyota Wallet
               </h3>
               <p style={{ color: C.muted, lineHeight: 1.8, fontSize: 14, marginBottom: 16 }}>
-                {"{Brief description of the myToyota Wallet unit/department — what it does, its role within TFSPH, and what digital/fintech products it handles. Think: the team you called home.}"}
+                {"myTOYOTA Wallet is a digital money app brought to you by Toyota Financial Services Philippines Corporation. It brings together a range of "+
+                "payment options in a single app which is connected to the entire Toyota ecosystem that now accepts mobile payments. ​"}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {["Digital Wallet", "Fintech", "Project Mgmt", "My Department"].map(t => (
@@ -655,8 +675,9 @@ function CompanySection() {
                 <div style={{ flex: 2, minWidth: 280 }}>
                   <div style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em", color: C.muted, marginBottom: 6 }}>Role Summary</div>
                   <p style={{ color: C.muted, lineHeight: 1.8, fontSize: 14 }}>
-                    {"{Describe what your day-to-day looked like as a PM Intern — meetings you attended, tasks you owned, who you worked with, and how you fit into the team structure. Don't be shy; you did real work!}"}
+                    {"As a DTID – Payments Platform Intern, my day-to-day role progressed from observation and support in the early stages to more active involvement in coordination and documentation as I became more familiar with the team’s workflows. At the start, I mainly attended meetings, took notes, and learned how different units such as Treasury, IT, and business stakeholders collaborate on systems like MyToyotaWallet. Over time, I began contributing more by helping review and organize requirements, assisting in validating information, and supporting the preparation and refinement of documentation and test scripts. I also helped track updates from discussions and ensured that information shared across teams remained consistent and properly recorded. Overall, my role placed me within the project management structure as a support and coordination layer, helping bridge communication between technical and business teams while gaining hands-on experience in how complex payment platform projects are managed in a corporate environment."}
                   </p>
+                  <br></br>
                 </div>
               </div>
             </div>
@@ -671,10 +692,28 @@ function CompanySection() {
 /* ── SECTION: Projects + Deliverables (combined) ── */
 function ProjectsSection() {
   const deliverables = [
-    { icon: "📋", title: "{Deliverable 1 Title}", type: "Report / Document", desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", impact: "{Specific impact or outcome}" },
-    { icon: "📊", title: "{Deliverable 2 Title}", type: "Presentation / Deck", desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", impact: "{Specific impact or outcome}" },
-    { icon: "🗂️", title: "{Deliverable 3 Title}", type: "Research / Analysis", desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", impact: "{Specific impact or outcome}" },
-    { icon: "⚙️", title: "{Deliverable 4 Title}", type: "Process / Workflow", desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", impact: "{Specific impact or outcome}" },
+    { icon: "", 
+      title: "myTOYOTA Wallet", 
+      type: "Main Project", 
+      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
+      impact: "{Specific impact or outcome}",
+      link: "https://www.toyotafinancial.ph/mytoyotawallet",
+    },
+    { icon: "", 
+      title: "Dynamic WBS Gantt Chart", 
+      type: "Gantt Chart", 
+      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
+      impact: "{Specific impact or outcome}" },
+    { icon: "", 
+      title: "Enhanced Dynamic Test Script", 
+      type: "Test Script", 
+      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
+      impact: "{Specific impact or outcome}" },
+    { icon: "", 
+      title: "Project Prioritization Matrix", 
+      type: "Prioritization Matrix", 
+      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
+      impact: "{Specific impact or outcome}" },
   ];
 
   return (
@@ -743,7 +782,11 @@ function ProjectsSection() {
                   <div style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.08em", color: C.red, marginBottom: 2 }}>Impact</div>
                   <div style={{ fontSize: 13, color: C.offWhite }}>{d.impact}</div>
                 </div>
-                <button style={{
+                <button 
+                  onClick={() => 
+                    d.link ? window.open(d.link, "_blank") : alert("REDACTED VIA NDA")
+                  }
+                style={{
                   marginTop: 16, background: "transparent",
                   border: `1px solid ${C.border}`, color: C.goldLight,
                   padding: "8px 0", borderRadius: 6, cursor: "pointer",
@@ -1051,6 +1094,94 @@ function useActiveSection() {
   return active;
 }
 
+/* ── SECTION: Documentation ── */
+function DocumentationSection() {
+  const docs = [
+    {
+      caption: "{Photo Caption 1 — e.g., 'Team standup meeting with the myToyota Wallet PM team'}",
+      description: "{Describe what's happening in this photo — the context, who's involved, what was being discussed or accomplished, and why this moment was significant during your OJT.}",
+    },
+    {
+      caption: "{Photo Caption 2 — e.g., 'Presenting project deliverables to the department head'}",
+      description: "{Describe what's happening in this photo — the context, who's involved, what was being discussed or accomplished, and why this moment was significant during your OJT.}",
+    },
+    {
+      caption: "{Photo Caption 3 — e.g., 'Collaborative session for the myToyota Wallet roadmap planning'}",
+      description: "{Describe what's happening in this photo — the context, who's involved, what was being discussed or accomplished, and why this moment was significant during your OJT.}",
+    },
+  ];
+ 
+  return (
+    <section id="documentation" style={{ padding: "100px 24px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <FadeSection>
+          <SectionHeader
+            label="06 · The Receipts"
+            title="Documentation"
+            subtitle="Because if there's no photo, did it even happen? Here's proof I actually showed up."
+          />
+        </FadeSection>
+ 
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 28 }}>
+          {docs.map((d, i) => (
+            <FadeSection key={i}>
+              <div className="card-hover" style={{
+                background: C.navyMid, border: `1px solid ${C.border}`,
+                borderRadius: 16, overflow: "hidden",
+              }}>
+                {/* Image placeholder */}
+                <div style={{
+                  width: "100%", aspectRatio: "16/9",
+                  background: `linear-gradient(135deg, ${C.slate}, ${C.navyMid})`,
+                  display: "flex", flexDirection: "column",
+                  alignItems: "center", justifyContent: "center", gap: 10,
+                  borderBottom: `1px solid ${C.border}`,
+                  position: "relative", overflow: "hidden",
+                }}>
+                  <div style={{
+                    position: "absolute", inset: 0,
+                    backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+                    backgroundSize: "20px 20px",
+                  }} />
+                  <div style={{ fontSize: 36, opacity: 0.4 }}>📷</div>
+                  <div style={{
+                    fontSize: 11, color: C.muted, textTransform: "uppercase",
+                    letterSpacing: "0.1em", textAlign: "center", padding: "0 16px",
+                  }}>
+                    Photo Placeholder<br />
+                    <span style={{ opacity: 0.6 }}>Replace with actual image</span>
+                  </div>
+                  <div style={{
+                    position: "absolute", top: 12, right: 12,
+                    background: C.red, borderRadius: 4,
+                    padding: "3px 8px", fontSize: 10,
+                    fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
+                  }}>
+                    #{String(i + 1).padStart(2, "0")}
+                  </div>
+                </div>
+ 
+                {/* Caption & description */}
+                <div style={{ padding: 24 }}>
+                  <p style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontWeight: 700, fontSize: "1rem",
+                    color: C.goldLight, marginBottom: 10,
+                    textTransform: "uppercase", letterSpacing: "0.04em",
+                    lineHeight: 1.4,
+                  }}>{d.caption}</p>
+                  <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.8 }}>{d.description}</p>
+                </div>
+              </div>
+            </FadeSection>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+ 
+
 /* ── APP ── */
 export default function App() {
   const active = useActiveSection();
@@ -1082,6 +1213,8 @@ export default function App() {
         <SkillsSection />
         <div className="divider" style={{ maxWidth: 1200, margin: "0 auto" }} />
         <ReflectionSection />
+        <div className="divider" style={{ maxWidth: 1200, margin: "0 auto" }} />
+        <DocumentationSection />
       </main>
       <Footer />
     </>
