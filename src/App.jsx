@@ -3,6 +3,9 @@ import aleksPhoto from "./assets/Aleks Photo.jpg";
 import tfsLogo from "./assets/ToyotaFinancialServicesLogo.jpg";
 import mtwLogo from "./assets/myToyotaWallet Logo.png";
 import aleksPogiPhoto from "./assets/candidpogi.jpg";
+import companyVisitPhoto from "./assets/companyvisit.jpg";
+import mtwTeamLunchPhoto from "./assets/mtw teamlunch.jpg";
+import internsGroupPhoto from "./assets/internpic.jpg";
 
 /* ── Toyota palette ── */
 const C = {
@@ -621,7 +624,7 @@ function CompanySection() {
                 "Holdings Inc., TFSPH continues to grow as a key player in enabling accessible and flexible vehicle financing in the country."}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {["Financial Services", "Automotive", "Philippines", "BGC Taguig"].map(t => (
+                {["Financial Services", "Automotive", "Philippines", "Salcedo Village"].map(t => (
                   <span key={t} className="pill">{t}</span>
                 ))}
               </div>
@@ -693,27 +696,26 @@ function CompanySection() {
 function ProjectsSection() {
   const deliverables = [
     { icon: "", 
-      title: "myTOYOTA Wallet", 
-      type: "Main Project", 
-      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
-      impact: "{Specific impact or outcome}",
-      link: "https://www.toyotafinancial.ph/mytoyotawallet",
+      title: "myTOYOTA Wallet UI/UX Design Review Tracker", 
+      type: "myTOYOTA Wallet", 
+      desc: "This deliverable is a centralized tracker used to monitor UI/UX design review items for the myTOYOTA Wallet project. It lists pending tasks, assigned stakeholders, deadlines, and status updates to ensure that all teams (design, development, and business units) are aligned. It matters because UI/UX reviews often involve multiple revisions and approvals, and without proper tracking, delays and miscommunication can occur. This tracker helped maintain visibility and accountability across all stakeholders, ensuring that deliverables were completed on time and aligned with project requirements.", 
+      impact: "Improved coordination among stakeholders, reduced delays in design approvals, and ensured timely completion of UI/UX deliverables, helping keep the myTOYOTA Wallet project on schedule.",
     },
     { icon: "", 
       title: "Dynamic WBS Gantt Chart", 
       type: "Gantt Chart", 
-      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
-      impact: "{Specific impact or outcome}" },
+      desc: "This is a department-wide tool that combines a Work Breakdown Structure (WBS) and Gantt Chart into a single dynamic Excel file. I spearheaded its development using advanced formulas and formatting to automatically visualize task timelines, dependencies, and progress. It matters because project planning and tracking are critical in managing multiple initiatives, and having a dynamic, automated tool reduces manual effort and errors. This deliverable allowed teams to clearly break down tasks, assign responsibilities, and monitor deadlines efficiently.", 
+      impact: "Enhanced project planning and monitoring across the department, improved task visibility, and enabled more efficient tracking of timelines, leading to better on-time delivery of projects." },
     { icon: "", 
       title: "Enhanced Dynamic Test Script", 
       type: "Test Script", 
-      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
-      impact: "{Specific impact or outcome}" },
+      desc: "This deliverable is an improved version of the department’s test script template, designed to be dynamic and user-friendly. I spearheaded its development to include structured formatting, automated tracking, and built-in analytics. It also features mechanisms (listeners) that capture failed test cases and link them to the issue tracking system for faster resolution. This matters because testing is a critical phase in system development, and poorly managed test scripts can lead to missed issues and inefficiencies. This enhancement ensured that test cases are organized, easier to execute, and properly monitored.", 
+      impact: "Improved testing efficiency and accuracy, faster identification and reporting of issues, and better collaboration between testers and developers, resulting in higher quality system outputs." },
     { icon: "", 
       title: "Project Prioritization Matrix", 
       type: "Prioritization Matrix", 
-      desc: "{Describe this deliverable — what it was, why it mattered, and how it contributed to the project.}", 
-      impact: "{Specific impact or outcome}" },
+      desc: "This is a decision-making tool used across the department to evaluate and prioritize projects based on factors such as impact, effort, and resource requirements. I spearheaded its development to help the team objectively assess which projects should be prioritized. It matters because departments often handle multiple projects simultaneously, and without proper prioritization, resources may be misallocated. This matrix provided a structured approach to decision-making, ensuring that high-impact projects receive appropriate focus.", 
+      impact: "Enabled better resource allocation and strategic planning, improved decision-making on project priorities, and ensured that high-value projects were addressed efficiently." },
   ];
 
   return (
@@ -738,24 +740,43 @@ function ProjectsSection() {
             </h3>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
               <div>
-                <div style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em", color: C.muted, marginBottom: 8 }}>The Project(s)</div>
+                <div style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em", color: C.muted, marginBottom: 8 }}>The Project</div>
                 <p style={{ color: C.offWhite, lineHeight: 1.8, fontSize: 14 }}>
-                  {"{Describe the main project(s) you were involved in. What was being built or improved? What problem was it solving? Keep it clear — imagine explaining it to your lola.}"}
+                  {"During my internship at Toyota Financial Services Philippines Corporation, I was involved in the myTOYOTA Wallet Payments Platform project. The goal of the project was to improve how customers pay for their Toyota-related transactions (such as financing and services) using a digital wallet."}
+                </p>
+                <br></br>
+                <p style={{ color: C.offWhite, lineHeight: 1.8, fontSize: 14 }}>
+                  {"In simple terms, the team was building and improving a system that makes payments faster, more convenient, and more secure—so instead of going through manual or complicated processes, customers can easily pay through their phones. It also helped the company reduce delays, avoid errors, and better track transactions."}
                 </p>
               </div>
               <div>
                 <div style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em", color: C.muted, marginBottom: 8 }}>Objectives & Company Alignment</div>
                 <p style={{ color: C.offWhite, lineHeight: 1.8, fontSize: 14 }}>
-                  {"{What were the main objectives of the project? How did they align with TFSPH's or myToyota Wallet's business goals? Connect the dots here.}"}
+                  {"The main objectives of the project were to:"}
+                  <br></br>
+                  <br></br>
+                  <ul style={{ color: C.offWhite, lineHeight: 2, fontSize: 14, paddingLeft: 18 }}>
+                    <li>{"Streamline and digitize payment processes"}</li>
+                    <li>{"Improve user experience for customers using the myTOYOTA Wallet"}</li>
+                    <li>{"Ensure accurate and efficient handling of transactions"}</li>
+                    <li>{"Strengthen coordination between departments involved in payments"}</li>
+                  </ul>
+                  <br></br>
+                  {"These objectives directly support Toyota Financial Services Philippines Corporation’s goal of digital transformation and customer convenience. By improving the payment platform, the company can serve customers faster, reduce operational issues, and stay competitive in financial technology services."}
                 </p>
               </div>
               <div>
                 <div style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em", color: C.muted, marginBottom: 8 }}>My Specific Responsibilities</div>
                 <ul style={{ color: C.offWhite, lineHeight: 2, fontSize: 14, paddingLeft: 18 }}>
-                  <li>{"{Responsibility / Task 1}"}</li>
-                  <li>{"{Responsibility / Task 2}"}</li>
-                  <li>{"{Responsibility / Task 3}"}</li>
-                  <li>{"{Responsibility / Task 4}"}</li>
+                  <li>{"Created and maintained project schedules and timelines"}</li>
+                  <li>{"Coordinated with multiple stakeholders (e.g., Treasury, MyToyota Wallet team)"}</li>
+                  <li>{"Ensured processes and workflows were aligned across departments"}</li>
+                  <li>{"Assisted in reviewing and refining business and system requirements"}</li>
+                  <li>{"Followed up on pending cases, issues, and clarifications"}</li>
+                  <li>{"Helped document processes, updates, and meeting discussions"}</li>
+                  <li>{"Provided suggestions and fresh ideas to improve workflows and efficiency"}</li>
+                  <li>{"Supported testing activities (e.g., reviewing test scripts and revisions)"}</li>
+                  <li>{"Participated in meetings to clarify requirements and resolve concerns"}</li>
                 </ul>
               </div>
             </div>
@@ -813,13 +834,22 @@ function ProjectsSection() {
             <div className="accent-line" style={{ background: `linear-gradient(90deg, ${C.gold}, ${C.goldLight})` }} />
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
               {[
-                { q: "The Challenge", a: "{What specific problem or gap did the company have that your IT knowledge helped address?}" },
-                { q: "The Solution You Provided", a: "{What did you do — process improvement, system suggestion, documentation, automation, etc.? Be specific!}" },
-                { q: "How It Was Integrated", a: "{Was your solution actually used? How did the team adopt it? What changed in their workflow because of you?}" },
+                { q: "The Challenge", a: "The department handled multiple projects at the same time, particularly for the myTOYOTA Wallet Payments Platform, but there was a gap in having standardized, dynamic, and centralized tools for tracking progress, managing tasks, prioritizing projects, and handling testing processes. Many workflows relied on manual updates, scattered files, or static formats, which led to inefficiencies such as delayed updates, misalignment between stakeholders, difficulty in tracking progress, and slower issue resolution during testing." },
+                { q: "The Solution You Provided", a: "To address these gaps, I contributed by developing and improving several IT-driven and process-oriented solutions:\n\n" +
+                "- Designed a UI/UX Design Review Tracker to centralize and monitor pending items, ensuring alignment across stakeholders\n" + 
+                "- Spearheaded a Dynamic WBS Gantt Chart in Excel with automated formulas to improve project scheduling, task breakdown, and progress tracking\n" + 
+                "- Developed an Enhanced Dynamic Test Script with structured formatting, analytics, and failure-listening mechanisms to improve testing efficiency and issue reporting\n" +
+                "- Created a Project Prioritization Matrix to help the department evaluate and prioritize projects based on impact, effort, and resource requirements\n\n" + 
+                "These solutions focused on process improvement, automation, and better documentation, making workflows more organized, efficient, and data-driven."},
+                { q: "How It Was Integrated", a: "The solutions were adopted by the department and integrated into their daily workflows:\n\n" +
+                "- The UI/UX Design Review Tracker and Dynamic WBS Gantt Chart were actively used by teams as standard tools for tracking deliverables, timelines, and project progress, improving visibility and coordination across stakeholders\n" +
+                "- The Enhanced Dynamic Test Script and Project Prioritization Matrix are currently under revision and continuous improvement, with feedback being gathered from stakeholders to further refine their functionality and usability before full implementation\n\n" +
+                "Even at this stage, these tools contributed to improving discussions, planning approaches, and awareness of better systems, while laying the groundwork for more structured and efficient workflows once fully deployed"
+                 },
               ].map(({ q, a }) => (
                 <div key={q}>
                   <div style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em", color: C.gold, marginBottom: 8 }}>{q}</div>
-                  <p style={{ color: C.muted, lineHeight: 1.8, fontSize: 14 }}>{a}</p>
+                  <p style={{ color: C.muted, lineHeight: 1.8, fontSize: 14, whiteSpace: "pre-line" }}>{a}</p>
                 </div>
               ))}
             </div>
@@ -833,19 +863,19 @@ function ProjectsSection() {
 /* ── SECTION: Skills, Tools, Learning (combined) ── */
 function SkillsSection() {
   const tools = [
-    { cat: "Project Management", items: ["{Tool/Framework 1}", "{Tool/Framework 2}", "{Tool/Framework 3}"] },
-    { cat: "Productivity & Docs", items: ["{Microsoft Office}", "{Google Workspace}", "{Tool 3}"] },
-    { cat: "Communication", items: ["{Teams / Slack}", "{Zoom}", "{Other}"] },
-    { cat: "Technical Skills", items: ["{Tool 1}", "{Tool 2}", "{Tool 3}"] },
+    { cat: "Project Management", items: ["SDLC", "Agile + Scrum"] },
+    { cat: "Productivity & Docs", items: ["Microsoft Office", "Google Workspace"] },
+    { cat: "Communication", items: ["Microsoft Teams", "Slack", "Outlook"] },
+    
   ];
 
   const softSkills = [
-    { icon: "🗣️", skill: "Communication", desc: "{How you applied this during OJT}" },
-    { icon: "🧩", skill: "Problem-Solving", desc: "{How you applied this during OJT}" },
-    { icon: "🤝", skill: "Teamwork", desc: "{How you applied this during OJT}" },
-    { icon: "⏰", skill: "Time Management", desc: "{How you applied this during OJT}" },
-    { icon: "🔍", skill: "Attention to Detail", desc: "{How you applied this during OJT}" },
-    { icon: "💡", skill: "Critical Thinking", desc: "{How you applied this during OJT}" },
+    { icon: "🗣️", skill: "Communication", desc: "I applied communication by regularly coordinating with different stakeholders such as the Treasury team and the myTOYOTA Wallet team. I ensured that requirements, updates, and issues were clearly understood by all parties through meetings, follow-ups, and documentation." },
+    { icon: "🧩", skill: "Problem-Solving", desc: "I used problem-solving when identifying gaps in existing workflows, such as inefficient tracking and unclear processes. I addressed these by proposing and developing improved tools like dynamic trackers, test scripts, and prioritization matrices." },
+    { icon: "🤝", skill: "Teamwork", desc: "I practiced teamwork by collaborating with multiple departments and team members, ensuring alignment in tasks and deliverables. I supported team efforts by assisting in documentation, testing, and coordination to achieve shared project goals." },
+    { icon: "⏰", skill: "Time Management", desc: "I applied time management by handling multiple tasks and deliverables simultaneously, such as maintaining trackers, updating documents, and following up on pending items, while ensuring deadlines were met." },
+    { icon: "🔍", skill: "Attention to Detail", desc: "I demonstrated attention to detail when reviewing requirements, test scripts, and deliverables to ensure accuracy and completeness, minimizing errors that could affect project timelines and outputs." },
+    { icon: "💡", skill: "Critical Thinking", desc: "I used critical thinking when analyzing project workflows and identifying areas for improvement. I evaluated different approaches and suggested structured, data-driven solutions to enhance efficiency and decision-making." },
   ];
 
   return (
@@ -870,10 +900,10 @@ function SkillsSection() {
             </h3>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
               <p style={{ color: C.muted, lineHeight: 1.85, fontSize: 14 }}>
-                {"{Summarize the skills, knowledge, and professional behaviors you developed. What did you learn that school couldn't teach? What was your biggest aha moment?}"}
+                {"During my internship, I developed both technical and professional skills that go beyond what is typically taught in school. I improved my project management skills, particularly in scheduling, task tracking, and stakeholder coordination. I also enhanced my ability in process improvement and documentation, creating structured and dynamic tools such as trackers, Gantt charts, and test scripts. On the soft skills side, I strengthened my communication, teamwork, and initiative, especially when coordinating with different departments and following up on tasks. What I learned that school could not fully teach is how to navigate real-world ambiguity—requirements are not always clear, and you often need to ask the right questions, adapt quickly, and take initiative to move things forward. My biggest “aha” moment was realizing that success in projects is not just about technical skills, but about alignment and communication—even the best solution will fail if stakeholders are not aligned."}
               </p>
               <p style={{ color: C.muted, lineHeight: 1.85, fontSize: 14 }}>
-                {"{How did the OJT help you grow professionally? Talk about the workplace environment, corporate culture, industry practices, and what surprised you (good or bad).}"}
+                {"The OJT helped me grow professionally by exposing me to an actual corporate environment at Toyota Financial Services Philippines Corporation, where structure, accountability, and collaboration are critical. I learned how corporate culture emphasizes professionalism, respect for timelines, and clear communication, especially when working with multiple teams. I was introduced to real industry practices such as stakeholder meetings, requirement validation, testing cycles, and continuous improvement of processes. One thing that surprised me was how fast-paced and detail-oriented the work environment is—small mistakes can have larger impacts, so accuracy and clarity are very important. On the positive side, I also observed how teams collaborate and support each other to achieve common goals, which showed me the importance of teamwork in a professional setting. Overall, the experience helped me transition from a student mindset to a more professional, responsible, and proactive individual."}
               </p>
             </div>
           </div>
@@ -912,11 +942,12 @@ function SkillsSection() {
             <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.2rem", textTransform: "uppercase", color: C.white, marginBottom: 16 }}>
               Modern Techniques & Methodologies
             </h3>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10, textAlign: "center", justifyContent: "center" }}>
               {[
-                "{Agile / Scrum}", "{Project Management Framework}", "{Digital Documentation}",
-                "{Stakeholder Management}", "{Risk Management}", "{Process Mapping}",
-                "{Another Technique}", "{One More}",
+                "Agile / Scrum", "Project Management Lifecycle (SDLC)", "Work Breakdown Structure (WBS)", "Gantt Chart Scheduling", 
+                "Stakeholder Coordination & Management", "Process Improvement & Optimization", "Workflow / Process Mapping", 
+                "Requirements Gathering & Validation", "Test Case Design & Management", "Data-Driven Decision Making (Project Prioritization)", 
+                "Risk Identification & Monitoring", "Task Tracking & Progress Monitoring Systems", "Documentation Standardization",
               ].map(t => (
                 <span key={t} className="pill" style={{ background: `${C.red}15`, borderColor: `${C.red}44`, color: C.offWhite }}>{t}</span>
               ))}
@@ -925,7 +956,7 @@ function SkillsSection() {
         </FadeSection>
 
         {/* Soft skills */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16, textAlign: "center",  }}>
           {softSkills.map((s) => (
             <FadeSection key={s.skill}>
               <div className="card-hover" style={{
@@ -947,12 +978,17 @@ function SkillsSection() {
 /* ── SECTION: Reflection ── */
 function ReflectionSection() {
   const reflections = [
-    { emoji: "🏔️", title: "Biggest Challenges", content: "{What were the hardest parts of the OJT? Technical struggles? Fitting into corporate culture? Navigating adult life 9-to-5? Be real about it.}" },
-    { emoji: "🏆", title: "Biggest Wins", content: "{What are you most proud of? A deliverable that got praised? A problem you solved on your own? That one moment you felt like a real professional?}" },
-    { emoji: "🌱", title: "Personal Growth", content: "{How did you grow as a person — not just professionally, but as an individual? Did your confidence change? Your communication style? Your work ethic?}" },
-    { emoji: "💼", title: "Key Takeaways", content: "{What are the top 3–5 things you're taking away from this OJT that will actually stick with you in your career?}" },
-    { emoji: "🎓", title: "Understanding My Field Better", content: "{How did this OJT change or deepen your understanding of Information Technology — specifically in the context of project management and fintech?}" },
-    { emoji: "🚀", title: "What's Next", content: "{How do you plan to use this experience moving forward — in your last year of school, job hunting, or in the career path you're building for yourself?}" },
+    { emoji: "🏔️", title: "Biggest Challenges", content: "One of the hardest parts of my OJT was adjusting to the corporate environment and expectations. Unlike school, tasks were not always clearly defined, and I had to learn how to ask the right questions and take initiative. Managing multiple deliverables at the same time while coordinating with different stakeholders was also challenging, especially when timelines were tight. There were moments where I had to step out of my comfort zone—speaking in meetings, following up with professionals, and making sure I was contributing value. It was also an adjustment to the 9-to-5 routine, where consistency, focus, and accountability are expected every day." },
+    { emoji: "🏆", title: "Biggest Wins", content: "What I am most proud of is being able to spearhead department-wide deliverables such as the Dynamic WBS Gantt Chart, Enhanced Test Script, and Project Prioritization Matrix. Knowing that my work was not just for a single task but could potentially be used across the department made me feel like I was contributing something meaningful. There were also moments when my suggestions were acknowledged during discussions, and when stakeholders used the trackers I created, it made me feel like a real professional—not just an intern." },
+    { emoji: "🌱", title: "Personal Growth", content: "This experience helped me grow not just professionally, but personally. I became more confident in communicating, especially when interacting with different teams and professionals. I also developed a stronger sense of responsibility and discipline, knowing that my work could affect actual projects and timelines. My mindset shifted from simply completing tasks to delivering value and thinking ahead. I became more proactive, more detail-oriented, and more aware of how I present myself in a professional setting." },
+    { emoji: "💼", title: "Key Takeaways", content: "- Communication and alignment are just as important as technical skills\n" + 
+    "- Initiative and proactiveness can set you apart, even as an intern\n" +
+    "- Real-world projects require adaptability—things don’t always go as planned\n" +
+    "- Structured processes and proper documentation make a huge difference\n" +
+    "- Collaboration is key—no project succeeds alone"
+    },
+    { emoji: "🎓", title: "Understanding My Field Better", content: "This OJT deepened my understanding of Information Technology by showing me that IT is not just about coding—it’s also about managing systems, processes, and people. In the context of project management and fintech, I saw how important it is to ensure that systems are reliable, efficient, and aligned with business goals. I learned how different teams—business, technical, and operations—work together to deliver a single platform like the myTOYOTA Wallet, and how project management plays a critical role in keeping everything on track." },
+    { emoji: "🚀", title: "What's Next", content: "Moving forward, I plan to use this experience to become more competitive and prepared for my future career. In my final year, I will apply what I learned in terms of project management, documentation, and teamwork in my academic projects. As I start job hunting, I will carry the confidence and professionalism I developed during my OJT. This experience also opened my eyes to the fintech industry and project management roles, and I am now more motivated to pursue opportunities where I can continue building systems, improving processes, and creating meaningful impact." },
   ];
 
   return (
@@ -984,7 +1020,7 @@ function ReflectionSection() {
                         fontSize: "1.1rem", textTransform: "uppercase",
                         color: C.goldLight, marginBottom: 10, letterSpacing: "0.05em",
                       }}>{r.title}</h4>
-                      <p style={{ color: C.muted, lineHeight: 1.85, fontSize: 14 }}>{r.content}</p>
+                      <p style={{ color: C.muted, lineHeight: 1.85, fontSize: 14, whiteSpace: "pre-line" }}>{r.content}</p>
                     </div>
                   </div>
                 </div>
@@ -1008,10 +1044,10 @@ function ReflectionSection() {
               color: C.offWhite, lineHeight: 1.4,
               maxWidth: 600, margin: "0 auto 16px",
             }}>
-              "{"{Insert your personal closing quote or motto that sums up your OJT journey — something that's genuinely you.}"}"
+              "{"Internships are like alcohol, the slowly you ferment it, the better the taste."}"
             </blockquote>
             <div style={{ fontSize: 13, color: C.muted, letterSpacing: "0.1em", textTransform: "uppercase" }}>
-              — {"{Your Name}"}, Project Management Intern · myToyota Wallet
+              — {"Aleks"}, Project Management Intern · myToyota Wallet
             </div>
           </div>
         </FadeSection>
@@ -1034,7 +1070,7 @@ function Footer() {
               <span style={{ color: C.red }}>OJT</span> E-Portfolio
             </div>
             <p style={{ color: C.muted, fontSize: 13, maxWidth: 260, lineHeight: 1.7 }}>
-              Made with <span style={{ color: C.red }}>♥</span> and a lot of late nights.<br />
+              Made with a lot of ☕.<br />
               {"Alexander Fabian Guarin"} · BSIT 4th Year
             </p>
           </div>
@@ -1057,7 +1093,7 @@ function Footer() {
           </div>
           <div>
             <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: C.muted, marginBottom: 12 }}>Contact</div>
-            <div style={{ color: C.offWhite, fontSize: 13, marginBottom: 6 }}>{"{your@email.com}"}</div>
+            <div style={{ color: C.offWhite, fontSize: 13, marginBottom: 6 }}>{"guarinfabian7@gmail.com | mafguarin@tip.edu.ph"}</div>
             <div style={{ color: C.muted, fontSize: 12 }}>Metro Manila, Philippines</div>
             <Logos />
           </div>
@@ -1098,16 +1134,19 @@ function useActiveSection() {
 function DocumentationSection() {
   const docs = [
     {
-      caption: "{Photo Caption 1 — e.g., 'Team standup meeting with the myToyota Wallet PM team'}",
-      description: "{Describe what's happening in this photo — the context, who's involved, what was being discussed or accomplished, and why this moment was significant during your OJT.}",
+      image: mtwTeamLunchPhoto,
+      caption: "Payment Platform Team Lunch",
+      description: "The first ever team lunch for the myTOYOTA Wallet Payments Platform team! This was a great opportunity for us to bond outside of work and get to know each other better. We shared stories, laughed over food, and strengthened our team camaraderie. It was a memorable moment that helped build stronger relationships among team members, which in turn improved our collaboration and communication during projects.",
     },
     {
-      caption: "{Photo Caption 2 — e.g., 'Presenting project deliverables to the department head'}",
-      description: "{Describe what's happening in this photo — the context, who's involved, what was being discussed or accomplished, and why this moment was significant during your OJT.}",
+      image: companyVisitPhoto,
+      caption: "OJT Coordinator Company Visit",
+      description: "The OJT coordinator visited our company to discuss the progress of the intern (me) and provide feedback on their performance. This visit was significant as it allowed us to address any concerns and ensure that the intern were on track with their learning objectives.",
     },
     {
-      caption: "{Photo Caption 3 — e.g., 'Collaborative session for the myToyota Wallet roadmap planning'}",
-      description: "{Describe what's happening in this photo — the context, who's involved, what was being discussed or accomplished, and why this moment was significant during your OJT.}",
+      image: internsGroupPhoto,
+      caption: "DTID Group Photo with Interns",
+      description: "A group photo with the Digital Transformation and Innovation Department, mostly the interns. This photo captures the camaraderie and team spirit we shared during our internship journey. It was a great way to commemorate our time together and the friendships we built while working on various projects.",
     },
   ];
  
@@ -1138,19 +1177,7 @@ function DocumentationSection() {
                   borderBottom: `1px solid ${C.border}`,
                   position: "relative", overflow: "hidden",
                 }}>
-                  <div style={{
-                    position: "absolute", inset: 0,
-                    backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-                    backgroundSize: "20px 20px",
-                  }} />
-                  <div style={{ fontSize: 36, opacity: 0.4 }}>📷</div>
-                  <div style={{
-                    fontSize: 11, color: C.muted, textTransform: "uppercase",
-                    letterSpacing: "0.1em", textAlign: "center", padding: "0 16px",
-                  }}>
-                    Photo Placeholder<br />
-                    <span style={{ opacity: 0.6 }}>Replace with actual image</span>
-                  </div>
+                  {d.image && <img src={d.image} alt={d.caption} style={{ width: "100%", height: "100%", objectFit: "cover" }} />}
                   <div style={{
                     position: "absolute", top: 12, right: 12,
                     background: C.red, borderRadius: 4,
